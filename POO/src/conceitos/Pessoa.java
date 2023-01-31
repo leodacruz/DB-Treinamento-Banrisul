@@ -36,10 +36,4 @@ public class Pessoa { // Entidade
     public boolean falar(String frase) {
         return true;
     }
-    
-    
-    
-    
-    
-    
 }
