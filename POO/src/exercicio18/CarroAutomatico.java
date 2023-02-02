@@ -13,11 +13,23 @@ final public class CarroAutomatico extends Carro {
     boolean ligar() {
         if (freioPuxado == true) {
             motorEstado = true;
-            return true;
         } else {
             motorEstado = false;
         }
         return motorEstado;
 
     }
+
+    void setFreioPuxado(){
+        this.freioPuxado = !freioPuxado;
+    }
+
+    
+    @Override
+    public String toString() {
+        return "CarroAutomatico \nFreio = " + (freioPuxado? "Puxado":"Solto")+
+        "\nMotor estado = "+(motorEstado?"LIgado":"Desligado") ;
+    }
+
+    
 }
