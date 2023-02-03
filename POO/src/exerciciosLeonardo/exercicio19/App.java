@@ -6,7 +6,7 @@ package exercicio19;
 public class App {
 
 	public static void main(String[] args) {
-		
+	//falta testar mas esta tudo pronto	
 
 	}
 
