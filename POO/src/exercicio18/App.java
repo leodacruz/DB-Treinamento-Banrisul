@@ -1,7 +1,5 @@
 package exercicio18;
 
-import java.nio.channels.SeekableByteChannel;
-
 public class App {
 
 	public static void main(String[] args) {
