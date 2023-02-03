@@ -1,4 +1,4 @@
-package exercicios.livraria;
+package livraria;
 
 public class Pessoa {
     private String doc; // Id

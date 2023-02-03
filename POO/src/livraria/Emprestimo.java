@@ -1,27 +1,27 @@
-package exercicios.livraria;
+package livraria;
 
 import java.time.LocalDateTime;
 
-// Empréstimo
+// Emprï¿½stimo
 // 1 Tomador (Pessoa)
 // 1 Livro
 
 public class Emprestimo {
-    private final int NUMERO_DIAS_RETORNO_LIVRO = 15; // Regra de negócio que indica que um livro pode ser emprestado por 15 dias
+    private final int NUMERO_DIAS_RETORNO_LIVRO = 15; // Regra de negï¿½cio que indica que um livro pode ser emprestado por 15 dias
     
     private Livro livro;
     private Pessoa tomador;
     private String dataCriacao;
     private String dataPrevisaoRetorno;
     
-    public Emprestimo(Livro livro, Pessoa tomador) { // 3 Parâmetros
+    public Emprestimo(Livro livro, Pessoa tomador) { // 3 Parï¿½metros
         this.setLivro(livro);
         this.setTomador(tomador);
-        this.dataCriacao = LocalDateTime.now().toString(); // Complexidade abstraída do mundo exterior
-        this.dataPrevisaoRetorno = LocalDateTime.now().plusDays(NUMERO_DIAS_RETORNO_LIVRO).toString(); // Complexidade abstraída do mundo exterior
+        this.dataCriacao = LocalDateTime.now().toString(); // Complexidade abstraï¿½da do mundo exterior
+        this.dataPrevisaoRetorno = LocalDateTime.now().plusDays(NUMERO_DIAS_RETORNO_LIVRO).toString(); // Complexidade abstraï¿½da do mundo exterior
     }
 
-    // Consulta do empréstimo
+    // Consulta do emprï¿½stimo
     public String getEmprestimo() {
         String livroDesc = this.livro.getTitulo() + " (" + this.livro.getIsbn() + ")";
         String pessoaDesc = this.tomador.getNome();

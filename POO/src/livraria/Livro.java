@@ -1,4 +1,4 @@
-package exercicios.livraria;
+package livraria;
 
 public class Livro {
     private String isbn; // Id

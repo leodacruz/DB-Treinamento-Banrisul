@@ -1,11 +1,11 @@
-package exercicios.arvore;
+package arvore;
 
 public class Pessoa {
     private String nome;
     private int idade;
     
-    private Pessoa mae; /* null */ // Alterações do modelo de mãe estão acontecendo também
-    private Pessoa pai; /* null */ // Alterações do modelo de pai estão acontecendo também
+    private Pessoa mae; /* null */ // Alteraï¿½ï¿½es do modelo de mï¿½e estï¿½o acontecendo tambï¿½m
+    private Pessoa pai; /* null */ // Alteraï¿½ï¿½es do modelo de pai estï¿½o acontecendo tambï¿½m
     
     public Pessoa(String nome, int idade, Pessoa mae, Pessoa pai) {
         this.setNome(nome);

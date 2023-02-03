@@ -1,8 +1,8 @@
-package exercicios.livraria;
+package livraria;
 
 public class ExercicioLivraria {
     /*
-     * Criar um sistema de controle de empréstimos de livros
+     * Criar um sistema de controle de emprï¿½stimos de livros
      * Livros | Pessoas | Emprestimo <- Entidades
      * */
     public static void main(String[] args) {

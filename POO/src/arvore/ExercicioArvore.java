@@ -1,8 +1,8 @@
-package exercicios.arvore;
+package arvore;
 
 public class ExercicioArvore {
     /*
-     * Criar um sistema represente a árvore genealógica de uma família
+     * Criar um sistema represente a ï¿½rvore genealï¿½gica de uma famï¿½lia
      * Pessoas <- Entidades
      * */
     public static void main(String[] args) {
@@ -13,7 +13,7 @@ public class ExercicioArvore {
         Pessoa voPPedro = new Pessoa("Nelson", 89);
         
         Pessoa maePedro = new Pessoa("Geovana", 62, avoMPedro, voMPedro);
-        Pessoa paiPedro = new Pessoa("Antônio", 65, avoPPedro, voPPedro);
+        Pessoa paiPedro = new Pessoa("Antï¿½nio", 65, avoPPedro, voPPedro);
         
         Pessoa pedro = new Pessoa("Pedro", 49, maePedro, paiPedro);
         Pessoa luiza = new Pessoa("Luiza", 33, maePedro, paiPedro);
@@ -21,9 +21,9 @@ public class ExercicioArvore {
         System.out.println(luiza.getArvore()); // Imprime a arvore inteira
         System.out.println();
 
-        System.out.println(pedro.getMae().getMae().getNome() + "(" + pedro.getMae().getMae().getIdade() + " anos)"); // Navega através da arvore para localizar um ente
+        System.out.println(pedro.getMae().getMae().getNome() + "(" + pedro.getMae().getMae().getIdade() + " anos)"); // Navega atravï¿½s da arvore para localizar um ente
         
-        // Navega através da arvore para localizar um ente de uma forma um pouco mais inteligente
+        // Navega atravï¿½s da arvore para localizar um ente de uma forma um pouco mais inteligente
         Pessoa ana = pedro.getMae().getMae();
         System.out.println(ana.getNome() + "(" + ana.getIdade() + " anos)");
     }
