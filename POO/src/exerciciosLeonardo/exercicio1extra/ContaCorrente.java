@@ -2,10 +2,9 @@ package exercicio1extra;
 
 public class ContaCorrente extends Conta {
 
-    
-    public ContaCorrente(Pessoa pessoa, long saldo) {
-        super(pessoa, saldo);
-        limiteCheque = 3000;
+    public ContaCorrente(Pessoa pessoa) {
+        super(pessoa);
+        setLimiteCheque(3000);
     }
-    
+
 }

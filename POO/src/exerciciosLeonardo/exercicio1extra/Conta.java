@@ -5,9 +5,10 @@ public  class Conta {
     long saldo ;
     long limiteCheque;
 
-    public Conta(Pessoa pessoa, long saldo) {
+    public Conta(Pessoa pessoa) {
         this.pessoa = pessoa;
-        this.saldo = saldo;
+        saldo = 0;
+        limiteCheque=0;
     }
 
     public long getSaldo(){
@@ -20,5 +21,19 @@ public  class Conta {
 
     public boolean deposito(int valor){
         return false;
+    }
+    
+
+    public Pessoa getPessoa() {
+        return pessoa;
+    }
+
+    public long getLimiteCheque() {
+        return limiteCheque;
+    }
+
+    public boolean setLimiteCheque(long valor){
+        limiteCheque = valor;
+        return true;
     }
 }
