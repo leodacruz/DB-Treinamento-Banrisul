@@ -29,6 +29,6 @@ public class Telefone {
 
     @Override
     public String toString() {
-        return "Telefone [numero=" + numero + ", ddd=" + ddd + ", bloqueado=" + bloqueado + "]";
+        return "Telefone [numero=" + ddd + " "+numero  + ",Este numero esta : "+ (bloqueado ? "Ativado" :"Bloqueado") + "]";
     }
 }

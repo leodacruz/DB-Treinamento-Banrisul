@@ -25,4 +25,10 @@ public class Pessoa {
         this.cpf = cpf;
     }
 
+    @Override
+    public String toString() {
+        return "Pessoa [nome=" + nome + ", cpf=" + cpf + "]";
+    }
+    
+
 }

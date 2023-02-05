@@ -7,6 +7,7 @@ public class Contato {
     public Contato(Pessoa pessoa, Telefone telefone) {
         this.pessoa = pessoa;
         this.telefone = telefone;
+        this.telefone.setBloqueado(true);
     }
 
     public Pessoa getPessoa() {
