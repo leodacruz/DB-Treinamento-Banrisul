@@ -1,11 +1,13 @@
 package exercicio1extra;
 
-public  interface Conta {
-   
-    public long getSaldo();  
+interface Conta {
 
-    public Pessoa getPessoa() ;
+    long getSaldo();
 
-    public boolean addSaldo(long saldo);
-   
+    Pessoa getPessoa();
+
+    boolean deposito(long saldo);
+
+    boolean saque(long valor);
+
 }

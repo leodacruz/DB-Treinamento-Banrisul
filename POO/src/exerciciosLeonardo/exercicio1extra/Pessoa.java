@@ -1,6 +1,6 @@
 package exercicio1extra;
 
-public class Pessoa {
+class Pessoa {
     private String nome;
     private String cpf;
 
@@ -9,19 +9,19 @@ public class Pessoa {
         this.cpf = cpf;
     }
 
-    public String getNome() {
+    String getNome() {
         return nome;
     }
 
-    public String getCpf() {
+    String getCpf() {
         return cpf;
     }
 
-    public void setNome(String nome) {
+    void setNome(String nome) {
         this.nome = nome;
     }
 
-    public void setCpf(String cpf) {
+    void setCpf(String cpf) {
         this.cpf = cpf;
     }
 
