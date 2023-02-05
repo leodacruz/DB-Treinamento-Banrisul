@@ -16,7 +16,7 @@ public class App {
 
 	public static void main(String[] args) {
 
-		Aluno aluno = dadosAluno();
+		Aluno aluno = dadosAluno(); //criacao do Aluno
 		Curso curso = new Curso();
 
 		// Na classe curso esta os calculos para saber a media e aprovacao
@@ -25,7 +25,7 @@ public class App {
 
 	}
 
-	// metodo para inserir o nome do aluno
+	// metodo para Criar o aluno
 	public static Aluno dadosAluno() {
 		Scanner sc = new Scanner(System.in);
 
@@ -65,10 +65,7 @@ public class App {
 		System.out.println("\nNotas inseridas com sucesso!");
 		sc.close();
 
-		Aluno aluno = new Aluno();
-		aluno.setNome(nome);
-		aluno.setNota(notas);
-		return aluno;
+		return new Aluno(nome,notas); //retorno a instancia do Aluno
 	}
 
 }

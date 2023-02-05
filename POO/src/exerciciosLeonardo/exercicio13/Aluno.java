@@ -8,6 +8,11 @@ public class Aluno {
 	public Aluno() {
 	}
 
+	public Aluno(String nome, double[] notas) {
+		this.nome=nome;
+		this.notas=notas;
+	}
+
 	public String getNome() {
 		return nome;
 	}
