@@ -4,7 +4,8 @@ de dados e para obtenção de horas, minutos e segundos a partir
 do tempo em segundos.
 Ex: 7023 segundos equivalem a 1h57min3seg
 
-*FIZ NO MODO PREGUICA*/
+*FIZ NO MODO PREGUICA, usei metodos pq nao vi razao para 
+criar classes, mas esta bem evoluido*/
 
 package exercicio14;
 
@@ -24,12 +25,41 @@ public class App {
 		}
 		sc.close();
 
-		long minutos = segundos / 60 % 60;
-		long horas = segundos / 60 / 60;
-		long segundosExato = segundos % 60 % 60;
+		long minutos = minutos(segundos);
+		long horas = horas(segundos);
+		long segundosExato = segundosExatos(segundos);
+		long dias = dias(segundos);
+		long semanas = semanas(segundos);
+		long anos = anos(segundos);
 
 		System.out.println("A conversao de  " + segundos + " segundos foi a de: ");
-		System.out.println(horas + "h : " + minutos + "m : " + segundosExato + "s");
+		System.out.println(anos + "a : " + semanas + " s : " + dias + "d : " + horas + "h : " + minutos + "m : "
+				+ segundosExato + "s");
 
 	}
+
+	public static long minutos(long segundos) {
+		return (segundos / 60 % 60);
+	}
+
+	public static long horas(long segundos) {
+		return (segundos / 60 / 60) % 24;
+	}
+
+	public static long segundosExatos(long segundos) {
+		return (segundos % 60 % 60);
+	}
+
+	public static long dias(long segundos) {
+		return (segundos / 60 / 60) / 24 %7;
+	}
+
+	public static long semanas(long segundos) {
+		return (segundos / 60 / 60) / 24 / 7;
+	}
+
+	public static long anos(long segundos) {
+		return (segundos / 60 / 60) / 24 / 7 / 365;
+	}
+
 }
