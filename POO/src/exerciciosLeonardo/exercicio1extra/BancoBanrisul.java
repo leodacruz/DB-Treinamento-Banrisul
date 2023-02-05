@@ -1,21 +1,28 @@
 package exercicio1extra;
 
-public class BancoBanrisul {
-    private Conta conta; //preciso de alguem que vai implementa a interface conta
+import java.util.ArrayList;
 
-    BancoBanrisul(Conta conta) {
-        this.conta = conta;
+public class BancoBanrisul {
+    private ArrayList<Conta> contas;
+   
+    BancoBanrisul() {
+        contas = new ArrayList<>();
     }
 
-    public void saque(long valor) {
+    public void saque(long valor,Conta conta) {
         //limite de cheque para conta corrente eh de 500 reais
+        int indice=contas.indexOf(conta);
+        if(indice == -1){
+          System.out.println("Conta nao encontrada no sistema");
+          return; //para sair do metodo 
+        }
 
-        if((conta.getSaldo() - valor < 0)){
+        if((contas.get(indice).getSaldo() - valor < 0)){
 
           if(conta instanceof ContaCorrente){ //to perguntando se conta foi implementada pela classe ContaCorrente
            //aqui te o limite do cheque (esse limite eh o quanto tua conta pode ficar negativa)
 
-           if((conta.getSaldo() - valor < -500)){//se passou do limite de 500
+           if((contas.get(indice).getSaldo() - valor < -500)){//se passou do limite de 500
             System.out.println("Saque indisponivel!!!\nO valor do saque supera o limite atual de cheque especial");
 
            }else{
@@ -37,12 +44,24 @@ public class BancoBanrisul {
         }  
     }
 
-    public boolean deposito(long valor) {
+    public boolean deposito(long valor,Conta conta) {
+      int indice=contas.indexOf(conta);
+        if(indice == -1){
+          System.out.println("Conta nao encontrada no sistema");
+          return false; //para sair do metodo 
+        }
+
+        
         if (valor > 0) {
-            return conta.addSaldo(valor);
+            return contas.get(indice).addSaldo(valor);
         } else {
             return false;
         }
+    }
+
+    public void addConta(Conta conta){
+      contas.add(conta);
+      System.out.println("Conta adcionada");
     }
 
 }
