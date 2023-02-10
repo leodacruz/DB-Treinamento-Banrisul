@@ -1,3 +1,44 @@
-Este exercicio consiste em mapear elemntos de uma paguina web
+Este exercicio consiste em mapear elementos de uma paguina web
+Para isso acesse : 
+https://www.saucedemo.com/
 
+Faca um fluxo de compra desde a tela inicial
+Utilize o conceito da piramide primeiro:
+veja se o elemento possuiu um id unico
+se nao 
+veja se tem nome/class unico
+se nao
+tera duas opcoes fazer o css ou o xpath
+No caso a melhor opcao eh o xpath pois o css caso haja alguma att nas posicoes
+dos elementos na tela muda,assim podendo quebrar o codigo.
+o css se pega ao selecionar um elemento uma bolha mostra o css em cima do elemnto.
+O xpath tem um padrao de montage que eh facilmente buscado na net,prguica de copiar o link no momento
+//tag [@atributo = 'nome_do_atributo']
+neste formato, para navegacoes tu usa o / simples e nao duas // isso errado.
+// se usa no inicio para informar o a partir daqui
+
+
+
+
+Agora mapeie elementos:
+
+Tela login:
+Elementos:
+
+Campo User name
+ID = user-name
+Xpath = //div[@class = 'form_group']/input[@id='user-name']
+
+Campo Password
+ID = password
+Xpath= //div[@class = 'form_group']/input[@id = 'password']
+
+Botao login
+Id=
+Xpath= //input[@id = "login-button"]
+
+
+
+
+agora faca login pelo standart
 
