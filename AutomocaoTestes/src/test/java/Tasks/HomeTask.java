@@ -13,10 +13,13 @@ public class HomeTask {
 		this.homePage = new HomePage(this.driver);
 	}
 
-	public void efetuarLogin() {
+	public void efetuarLogin() throws InterruptedException {
 		homePage.getUserNameInput().sendKeys("standard_user");
+		Thread.sleep(3000);
 		homePage.getPasswordInput().sendKeys("secret_sauce");
+		Thread.sleep(3000);
 		homePage.getLoginButton().click();
+		Thread.sleep(3000);
 	}
 
 }

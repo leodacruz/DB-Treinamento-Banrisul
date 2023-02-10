@@ -44,4 +44,10 @@ Xpath= //input[@id = "login-button"]
 
 agora faca login pelo standart
 
+na tela depois do login mapeie elementos que confirme que tu esta nesta tela
+
+
+
+apos adicione algum item ao carrinho e veja algum elento que confirme essa troca
+
 
