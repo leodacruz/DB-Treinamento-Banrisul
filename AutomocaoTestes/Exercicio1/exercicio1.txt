@@ -2,7 +2,7 @@ Este exercicio consiste em mapear elementos de uma paguina web
 Para isso acesse : 
 https://www.saucedemo.com/
 
-Faca um fluxo de compra desde a tela inicial
+Faca um fluxo de compra desde a tela inicial!!!
 Utilize o conceito da piramide primeiro:
 1 veja se o elemento possuiu um id unico
 se nao 
@@ -18,14 +18,30 @@ O xpath tem um padrao de montagem
 neste formato, para navegacoes tu usa o / simples e nao duas // isso errado.
 // se usa no inicio para informar o a partir daqui
 tb nao se usa "" igual aparece no navegador, se usa '' simples para informar o nome dos atributos
+e sempre se comeca uma camada ante do item, tipo como tem muitas camadas o recomendado
+eh comecar uma antes pois xpath muito longo póde dar ruim no futuro caso algume
+mude aquele item de lugar pq tinha um diretorio longo ate chegar nele
+oq nao pode fazer: //a/b/c/d/f/g [@id = 'tag']
+oq se faz: f/[@id = 'tag']
+claro que tu fala o id ou class do f ali mas isso so um exemplo
 
 
 
+Meu fluxo de compras:
+1 tela de login
+2 clicar num porduto
+3 add pro carrinho
+4 ir pro carrinho
+5 finalizar compra
+6 inserir dados
+7 revisar dados
+8 comprar 
+9 dai ele volta pra pagina ininical
+**podem ser mapeadas mais telas que o fluxo indica, botei ele para seguir uma ordem
 
-Agora mapeie elementos:
+Mapeamento elementos:
 
 Tela login:
-Elementos:
 
 Campo User name
 ID = user-name
@@ -37,17 +53,25 @@ Xpath= //div[@class = 'form_group']/input[@id = 'password']
 
 Botao login
 Id=
-Xpath= //input[@id = "login-button"]
+Xpath= //input[@id = 'login-button']
 
 
+Tela de compras:
+
+Imagem do primeiro Item
+Id= item_4_img_link
+Xpath = //a[@id = 'item_4_img_link']/img [@class = 'inventory_item_img']
+
+Filtro dos produtos
+id = product_sort_container
+xpath= //span [@class = 'select_container']/select [@class = 'product_sort_container']
 
 
-agora faca login pelo standart
+tela apos clicar na mochila
 
-na tela depois do login mapeie elementos que confirme que tu esta nesta tela
-
-
-
-apos adicione algum item ao carrinho e veja algum elento que confirme essa troca
+campo escrito 'BACK TO PRODUCTS'
+id= back-to-products
+Xpath=//div [@class = 'left_component']/button [@id = 'back-to-products']
 
 
+Ao clicar no 'ADD TO CART'
