@@ -4,11 +4,16 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
+
+import Framework.Browser.Waits;
+
 public class HomePage {
 	private WebDriver driver;
+	private Waits wait;
 
 	public HomePage(WebDriver driver) {
 		this.driver = driver;
+		this.wait= new Waits(this.driver);
 	}
 
 	public WebElement getUserNameInput() {
@@ -29,7 +34,8 @@ public class HomePage {
 	}
 	
 	public WebElement getTitle() {
-		return driver.findElement(By.className("login_logo"));
+		return wait.visibilityOfElemnt(By.className("login_logo"));
+		//return driver.findElement(By.className("login_logo"));
 	}
 
 }
