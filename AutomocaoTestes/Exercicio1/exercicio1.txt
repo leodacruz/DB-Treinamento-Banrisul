@@ -74,4 +74,16 @@ id= back-to-products
 Xpath=//div [@class = 'left_component']/button [@id = 'back-to-products']
 
 
+
+
 Ao clicar no 'ADD TO CART'
+Botao remove
+id= remove-sauce-labs-backpack
+Xpath= //div[@class = 'inventory_details_desc_container']/button[@id='remove-sauce-labs-backpack']
+
+carrinho com um 1
+id=
+xpath= 
+
+
+
