@@ -41,7 +41,7 @@ Meu fluxo de compras:
 
 Mapeamento elementos:
 
-Tela login:
+1 Tela login: -----------------------------------------------
 
 Campo User name
 ID = user-name
@@ -56,7 +56,8 @@ Id=
 Xpath= //input[@id = 'login-button']
 
 
-Tela de compras:
+2 Tela de compras--------------------------------------------
+
 
 Imagem do primeiro Item
 Id= item_4_img_link
@@ -67,23 +68,51 @@ id = product_sort_container
 xpath= //span [@class = 'select_container']/select [@class = 'product_sort_container']
 
 
-tela apos clicar na mochila
+3 tela apos clicar na mochila------------------------------------
 
 campo escrito 'BACK TO PRODUCTS'
 id= back-to-products
 Xpath=//div [@class = 'left_component']/button [@id = 'back-to-products']
 
+campo botao ADD TO CART
+id= add-to-cart-sauce-labs-backpack
+Xpath = 
 
 
-
-Ao clicar no 'ADD TO CART'
+4 Ao clicar no 'ADD TO CART' -----------------------------------------------
 Botao remove
 id= remove-sauce-labs-backpack
 Xpath= //div[@class = 'inventory_details_desc_container']/button[@id='remove-sauce-labs-backpack']
 
 carrinho com um 1
-id=
+id= shopping_cart_container 
 xpath= 
 
+5 No carrinho de compras ---------------------------------------------
+BUTTON CHECKOUT
+id= checkout
 
+6 confirmacao dados --------------------------------------------
+campo first name 
+id= first-name
+
+campo last name 
+id= last-name
+
+campo zip/postal code
+id= postal-code
+
+botao continue
+id= continue
+
+7 tela de revisao
+botao finish
+id= finish
+
+8 tela final antes de voltar pro home
+classe= pony_express
+Xpath= //div [@id = 'checkout_complete_container']/img [@class = 'pony_express']
+
+botao back home 
+id= back-to-products
 
