@@ -18,12 +18,11 @@ public class GenericPage {
 
 	public WebElement getHomeTestSpan() {
 		return driver.findElement(
-				By.xpath("div[@id='header_container']/div[@class='header_secondary_container']/span[@class='title]"));
+				By.xpath("//div[@class='header_secondary_container']/span[@class='title']"));
 	}
 
 	public WebElement getProductLabel() {
-		return wait.visibilityOfElemnt(By.id("inventory_item_name"));
-		//return driver.findElement(By.id("inventory_item_name"));
+		return wait.visibilityOfElemnt(By.className("inventory_item_name"));
 	}
 
 }

@@ -13,7 +13,7 @@ public class SelectProductPage {
 
 	public WebElement getAddToCart() {
 		return driver.findElement(By.xpath(
-				"//div[@class = 'inventory_details_desc_container']/button [@id = 'add-to-cart-sauce-labs-backpack']"));
+				"//div[@class = 'pricebar']/button [@id = 'add-to-cart-sauce-labs-backpack']"));
 	}
 	
 	public WebElement getBackProducts() {
