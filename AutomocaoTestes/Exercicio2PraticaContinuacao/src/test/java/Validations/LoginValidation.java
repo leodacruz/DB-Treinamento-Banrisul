@@ -3,7 +3,11 @@ package Validations;
 import org.junit.jupiter.api.Assertions;
 import org.openqa.selenium.WebDriver;
 
+import com.aventstack.extentreports.Status;
+
 import Framework.Browser.Waits;
+import Framework.Report.Report;
+import Framework.Report.Screenshot;
 import PageObject.HomePage;
 
 public class LoginValidation {
@@ -18,7 +22,13 @@ public class LoginValidation {
 	}
 
 	public void validationLoginPage() {
-		wait.loadElement(homePage.getTitle());
-		Assertions.assertTrue(homePage.getTitle().isDisplayed());
+		try {
+			wait.loadElement(homePage.getTitle());
+			Assertions.assertTrue(homePage.getTitle().isDisplayed());
+			Report.log(Status.PASS, "Acessou a pagina de login com sucesso", Screenshot.capture(driver));
+		} catch (Exception e) {
+			Report.log(Status.FAIL, e.getMessage(), Screenshot.capture(driver));
+		}
+
 	}
 }

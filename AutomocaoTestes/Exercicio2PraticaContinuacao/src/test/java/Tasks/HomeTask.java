@@ -18,15 +18,21 @@ public class HomeTask {
 	    this.genericValidation= new GenericValidation(this.driver);
 	}
 
-	public void efetuarLogin() throws InterruptedException {
+	public void efetuarLogin() {
 		loginValidation.validationLoginPage();
 		homePage.getUserNameInput().sendKeys("standard_user");
-		Thread.sleep(3000);
 		homePage.getPasswordInput().sendKeys("secret_sauce");
-		Thread.sleep(3000);
 		homePage.getLoginButton().click();
-		Thread.sleep(3000);
 		genericValidation.validationPageProducts();
 	} 
+	
+	public void efetuarLoginCSV(String user, String password) {
+		loginValidation.validationLoginPage();
+		homePage.getUserNameInput().sendKeys(user);
+		homePage.getPasswordInput().sendKeys(password);
+		homePage.getLoginButton().click();
+		genericValidation.validationPageProducts();
+	} 
+	
 
 }
